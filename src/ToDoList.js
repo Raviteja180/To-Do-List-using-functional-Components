@@ -19,7 +19,7 @@ const ToDoList = () => {
             setArr(a)
             setUpdate(false)
         }
-        else setArr([...arr, task])
+        else if (task != "")setArr([...arr, task])
         setTask("")
     }
     const updateTask = (e) => {
