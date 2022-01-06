@@ -25,7 +25,6 @@ const ToDoList = () => {
     const updateTask = (e) => {
         setUpdate(true)
         setPrevTask(e.target.name)
-        let temp_array = arr;
         setTask(e.target.name)
     }
     const deleteTask = (e) => {
