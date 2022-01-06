@@ -12,14 +12,14 @@ const ToDoList = () => {
         setTask(e.target.value)
     }
     const addTask = () => {
-        if (update_of_task == true) {
+        if (update_of_task === true) {
             let a = arr
             console.log(a.length)
             a[a.indexOf(prev_task)] = task
             setArr(a)
             setUpdate(false)
         }
-        else if (task != "")setArr([...arr, task])
+        else if (task !== "")setArr([...arr, task])
         setTask("")
     }
     const updateTask = (e) => {
@@ -27,11 +27,10 @@ const ToDoList = () => {
         setPrevTask(e.target.name)
         let temp_array = arr;
         setTask(e.target.name)
-        let another_array = temp_array.filter(task => task == e.target.name)
     }
     const deleteTask = (e) => {
         let temp_array = arr
-        let another_array = temp_array.filter(task => task != e.target.name)
+        let another_array = temp_array.filter(task => task !== e.target.name)
         setArr(another_array)
         console.log(another_array)
     }
@@ -48,7 +47,7 @@ const ToDoList = () => {
                 arr.length > 0 &&
                 <div className="block-3">
                     {
-                        arr.map(task => task != "" ?
+                        arr.map(task => task !== "" ?
                             (
                                 <div className="block-2 alignment">
 
